@@ -7,7 +7,9 @@ import { AppComponent } from './app.component';
 import {BidiModule} from '@angular/cdk/bidi';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
-
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,11 @@ import { MenuComponent } from './menu/menu.component';
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
     FlexLayoutModule,
-    BidiModule
+    BidiModule,
+    MatListModule
   ],
   exports: [AppComponent],
   providers: [],
