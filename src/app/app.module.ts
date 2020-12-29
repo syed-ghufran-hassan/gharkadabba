@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    DishdetailComponent
   ],
   imports: [
     BrowserModule,
