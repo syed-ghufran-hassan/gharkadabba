@@ -19,6 +19,8 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PromotionService } from './services/promotion.service';
+
 
 
 @NgModule({
@@ -48,7 +50,7 @@ import { FooterComponent } from './footer/footer.component';
     MatIconModule
   ],
   exports: [AppComponent], 
-  providers: [DishService],
+  providers: [DishService, PromotionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

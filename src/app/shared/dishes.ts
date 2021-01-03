@@ -8,6 +8,7 @@ export const DISHES: Dish[] = [
       category: 'desserts',
       label: 'Hot',
       price: '16.99',
+      featured: true,
       description: 'A unique combination of apple and bread crums with lavanda syrup.',
       comments: [
         {
@@ -31,6 +32,7 @@ export const DISHES: Dish[] = [
       category: 'mains',
       label: 'Hot',
       price: '10.99',
+      featured: false,
       description: 'Famous donuts in desi style',
       comments: [
         {
@@ -48,6 +50,7 @@ export const DISHES: Dish[] = [
         category: 'mains',
         label: 'Hot',
         price: '15.99',
+        featured: true,
         description: 'Famous chicken tikka pizza with mouth watering taste',
         comments: [
           {
@@ -65,6 +68,7 @@ export const DISHES: Dish[] = [
         category: 'mains',
         label: 'Hot',
         price: '20.99',
+        featured: true,
         description: 'Famous Chaat Papri at your door step. Book now',
         comments: [
           {
