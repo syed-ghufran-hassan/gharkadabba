@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { DishService } from './services/dish.service';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
     MatIconModule
   ],
   exports: [AppComponent], 
-  providers: [],
+  providers: [DishService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

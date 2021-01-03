@@ -22,7 +22,6 @@
      <div [hidden]="dishes">
        <md-spinner></md-spinner> <h4>Loading . . . Please Wait</h4>
      </div>
-     <app-dishdetail [dish] = "selectedDish"></app-dishdetail>
      <div fxFlex *ngIf="selectedDish">
         <mat-card>
           <mat-card-header>
