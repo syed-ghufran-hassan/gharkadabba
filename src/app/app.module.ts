@@ -20,8 +20,12 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PromotionService } from './services/promotion.service';
-
-
+import { LoginComponent } from './login/login.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms'; 
 
 @NgModule({
   schemas: [
@@ -35,22 +39,26 @@ import { PromotionService } from './services/promotion.service';
     AboutComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatDialogModule,
     MatCardModule,
     MatButtonModule,
     FlexLayoutModule,
     BidiModule,
     MatGridListModule,
     AppRoutingModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule 
   ],
   exports: [AppComponent], 
   providers: [DishService, PromotionService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [LoginComponent],
 })
 export class AppModule { }
