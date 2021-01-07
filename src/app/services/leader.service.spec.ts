@@ -1,16 +1,27 @@
-import { TestBed } from '@angular/core/testing';
+  import { Injectable } from '@angular/core';
+import { Leader } from '../shared/leader';
+import { LEADERS } from '../shared/leaders';
+import { setTimeout } from 'timers';
 
-import { LeaderService } from './leader.service';
+@Injectable()
+export class LeaderService {
 
-describe('LeaderService', () => {
-  let service: LeaderService;
+  constructor() { }
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(LeaderService);
+  getLeaders(): Promise<Leader[]>
+  {
+    return new Promise(resolve=> {
+    // Simulate server latency with 2 second delay
+      setTimeout(() => resolve(LEADERS), 2000);
   });
+}
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  getLeader(id: number): Promise<Leader> {
+    return Promise.resolve(LEADERS.filter((leader) => (leader.id === id))[0]);
+  }
+
+  getFeaturedLeader(): Promise<Leader>{
+    return Promise.resolve(LEADERS.filter((leader) => (leader.featured))[0]);
+  }
+
+}
